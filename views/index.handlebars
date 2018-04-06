@@ -1,0 +1,22 @@
+{{!-- Setup the index.handlebars to have the template that Handlebars can render onto --}}
+{{!-- Create a button in index.handlebars that will submit the user input into the database. --}}
+
+<h1>Burgers</h1>
+
+<ol>
+    {{#each burgers}}
+        {{#unless devour}}
+            <form method="POST" >
+                <input type='text' value={{this.id}}>
+                <button id='devourbtn'>Devour IT!</button>
+            </form>            
+        {{/unless}}
+    {{/each}}
+</ol>
+
+<ol>
+  {{#each burgers}}
+    {{#if devour}}
+    {{/if}}
+  {{/each}}
+</ol>
