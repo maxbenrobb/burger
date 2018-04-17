@@ -4,10 +4,10 @@
 <h1>Burgers</h1>
 
 <ol>
-    {{#each burgers}}
+    {{#each burger}}
         {{#unless devour}}
-            <form method="POST" >
-                <input type='text' value={{this.id}}>
+            <form>
+                <input type='text' value={{this.burger_name}}>
                 <button id='devourbtn'>Devour IT!</button>
             </form>            
         {{/unless}}
@@ -15,7 +15,7 @@
 </ol>
 
 <ol>
-  {{#each burgers}}
+  {{#each burger}}
     {{#if devour}}
     {{/if}}
   {{/each}}
